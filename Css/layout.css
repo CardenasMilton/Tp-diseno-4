@@ -1,0 +1,14 @@
+.container {
+  width: min(100% - 2 * var(--gutter), var(--container));
+  margin-inline: auto;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-h2);
+  letter-spacing: var(--tracking-h2);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-espresso);
+}

@@ -1,0 +1,56 @@
+.promo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-block: var(--space-14);
+  background: var(--color-sand);
+}
+
+.promo__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  padding-inline: var(--gutter);
+  text-align: center;
+}
+.promo__title {
+  max-width: 23.25rem;                  /* 372 px */
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-cta);
+  line-height: var(--lh-cta);
+  color: var(--color-black);
+}
+.promo__btn {
+  gap: var(--space-3);
+  min-height: 3.1875rem;                /* 51 px */
+  padding-inline: var(--space-6);
+  background: var(--color-espresso);
+  color: var(--color-bg);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--fs-base);
+}
+.promo__chevrons {
+  width: 2.25rem;
+  height: 1.25rem;
+  background: currentColor;
+  mask: url("../../assets/icons/chevron.svg") 0 0 / 1.125rem 1.25rem repeat-x;
+}
+
+.promo__img { display: none; position: absolute; bottom: 0; }
+.promo__img--hand { left: 0; }
+.promo__img--beans { right: 0; }
+
+@media (min-width: 48rem) {
+  .promo__img--hand { display: block; width: 12rem; height: auto; }
+}
+@media (min-width: 64rem) {
+  .promo { min-height: 20.9375rem; padding-block: 0; }  /* 335 px */
+  .promo__img--hand { width: 26rem; }                   /* 520 px */
+  .promo__img--beans { display: block; width: 25.1875rem; height: auto; }  /* 503 px */
+}

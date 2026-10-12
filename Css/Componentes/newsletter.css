@@ -1,0 +1,71 @@
+.newsletter {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--space-14);
+  background: var(--color-sand);
+  color: var(--color-espresso);
+}
+
+.newsletter__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+.newsletter__title { font-weight: 600; font-size: var(--fs-h2); }
+.newsletter__text { font-weight: 500; font-size: var(--fs-base); }
+
+.newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  margin-top: var(--space-4);
+}
+.newsletter__field { position: relative; flex: 1; }
+.newsletter__icon {
+  position: absolute;
+  top: 50%;
+  left: var(--space-4);
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--color-muted);
+  mask: url("../../assets/icons/mail.svg") center / contain no-repeat;
+  translate: 0 -50%;
+}
+.newsletter__input {
+  width: 100%;
+  height: var(--touch);
+  padding-inline: 3rem var(--space-4);
+  background: var(--color-bg);
+  border: var(--border-w-lg) solid transparent;
+  border-radius: var(--radius-pill);
+}
+.newsletter__input::placeholder { color: var(--color-text-soft); }
+.newsletter__input:user-invalid { border-color: var(--color-error); }
+
+.newsletter__btn {
+  min-height: var(--touch);
+  padding-inline: var(--space-10);
+  background: var(--color-espresso);
+  color: var(--color-bg);
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  font-size: var(--fs-base);
+}
+
+.newsletter__beans { display: none; position: absolute; bottom: 0; }
+.newsletter__beans--left { left: 0; }
+.newsletter__beans--right { right: 0; transform: scaleX(-1); }
+
+@media (min-width: 48rem) {
+  .newsletter__form { flex-direction: row; justify-content: center; width: auto; }
+  .newsletter__field { flex: 0 0 22.75rem; }   /* 364 px */
+}
+@media (min-width: 64rem) {
+  .newsletter { display: flex; align-items: center; min-height: 20rem; padding-block: 0; }  /* 320 px */
+  .newsletter__inner { width: min(100% - 2 * var(--gutter), var(--container)); }
+  .newsletter__beans { display: block; width: 30.125rem; height: auto; }   /* 482 px */
+}

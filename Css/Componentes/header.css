@@ -1,0 +1,97 @@
+.header {
+  position: absolute;
+  inset-block-start: var(--space-4);
+  inset-inline: 0;
+  z-index: 10;
+  color: var(--color-white);
+}
+.header :focus-visible { outline-color: var(--color-white); }
+
+.header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch);
+  margin-right: auto;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-logo);
+  line-height: 1;
+  text-transform: lowercase;
+}
+
+.header__search {
+  order: 1;
+  width: var(--touch);
+  height: var(--touch);
+  padding: 0;
+  border: 0;
+  background: url("../../assets/icons/search.svg") center / contain no-repeat;
+  cursor: pointer;
+}
+
+/* Menú hamburguesa solo CSS */
+.header__burger {
+  order: 2;
+  position: relative;
+  width: var(--touch);
+  height: var(--touch);
+  cursor: pointer;
+}
+.header__burger::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0.625rem;
+  top: 50%;
+  height: 2px;
+  background: currentColor;
+  box-shadow: 0 -0.4375rem 0 currentColor, 0 0.4375rem 0 currentColor;
+  translate: 0 -50%;
+}
+.header__toggle:focus-visible + .header__burger {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+.header__nav {
+  order: 3;
+  display: none;
+  flex-basis: 100%;
+  padding: var(--space-4);
+  background: var(--color-espresso);
+  border-radius: var(--radius-card);
+}
+.header__toggle:checked ~ .header__nav { display: block; }
+
+.header__list { display: flex; flex-direction: column; }
+.header__link {
+  display: flex;
+  align-items: center;
+  min-height: var(--touch);
+  font-weight: 500;
+  font-size: var(--fs-md);
+  text-transform: uppercase;
+}
+.header__link--login { font-weight: 600; }
+
+@media (min-width: 64rem) {
+  .header { inset-block-start: 3.4375rem; }  /* 55 px */
+  .header__inner { flex-wrap: nowrap; }
+  .header__burger { display: none; }
+  .header__nav {
+    order: 0;
+    display: block;
+    flex-basis: auto;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+  }
+  .header__list { flex-direction: row; gap: var(--space-10); }
+  .header__search { width: 3.8125rem; height: 3.8125rem; margin-left: var(--space-6); }
+}
