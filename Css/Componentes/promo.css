@@ -39,7 +39,7 @@
   width: 2.25rem;
   height: 1.25rem;
   background: currentColor;
-  mask: url("../../assets/icons/chevron.svg") 0 0 / 1.125rem 1.25rem repeat-x;
+  mask: url("../../Assets/Icons/chevron.svg") 0 0 / 1.125rem 1.25rem repeat-x;
 }
 
 .promo__img { display: none; position: absolute; bottom: 0; }

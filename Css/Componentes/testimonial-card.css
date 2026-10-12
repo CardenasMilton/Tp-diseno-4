@@ -57,7 +57,7 @@
   height: 1.5rem;
   margin-left: auto;
   background: var(--color-star);
-  mask: url("../../assets/icons/star.svg") 0 0 / 1.75rem 1.5rem repeat-x;
+  mask: url("../../Assets/Icons/star.svg") 0 0 / 1.75rem 1.5rem repeat-x;
 }
 .testimonial-card__text {
   font-weight: 500;

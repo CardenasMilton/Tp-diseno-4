@@ -32,7 +32,7 @@
   height: var(--touch);
   padding: 0;
   border: 0;
-  background: url("../../assets/icons/search.svg") center / contain no-repeat;
+  background: url("../../Assets/Icons/search.svg") center / contain no-repeat;
   cursor: pointer;
 }
 

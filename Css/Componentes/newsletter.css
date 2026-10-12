@@ -32,7 +32,7 @@
   width: 1.5rem;
   height: 1.5rem;
   background: var(--color-muted);
-  mask: url("../../assets/icons/mail.svg") center / contain no-repeat;
+  mask: url("../../Assets/Icons/mail.svg") center / contain no-repeat;
   translate: 0 -50%;
 }
 .newsletter__input {
